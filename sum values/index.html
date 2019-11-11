@@ -1,0 +1,111 @@
+<DOCTYPE html>
+
+	<html lang="en">
+   
+   	 <head>
+
+      <meta charset="utf-8"/>
+
+      <title> Vacation Budget Calculator</title>
+      
+      <!--CSS Link -->
+      <link rel="stylesheet" href="css/main.css"/>
+
+    </head>	
+
+<body>		
+
+		 	
+ 	<p> Sum values of numeric inputfields <p>
+
+ 	
+	<div id= vacation_budget> 
+
+		<h2> Vacation Budget Calculator </h2>
+
+		<!-- Form with the Fields I want to calculate for My Vacation Budget -->
+
+		<form  onsubmit="return budgetformSubmitHandler()">
+			
+			
+			<label  for="hotel"> Hotel </label>
+			<input name="budget-form-input" id="hotel" type="text" aria-required="true" placeholder="add total hotel cost" />
+
+		</br>
+
+			<label  for="flight"> Flight </label>
+			<input name="budget-form-input" id="flight" type="text"  aria-required="true" placeholder="add total flight cost"/>
+		
+		</br>
+
+			<label  for="car_rental">Car Rental</label>
+			<input name="budget-form-input" id="car_rental" type="text"   aria-required="true" placeholder="add total Car rental cost" />
+		
+		</br>
+		
+			<label  for="food_budget"> Food Budget</label>
+			<input name="budget-form-input" id="food_budget" type="text" aria-required="true" placeholder="add Food estimate cost"/>
+
+		</br>	
+
+		<input class="submitbutton" type="submit" value="Submit" />
+		
+		</form>
+	
+
+
+	</div>
+
+<script type="text/javascript">	
+
+// Function to Sum all the values of my form to obtain the total expenses of my vacation
+		
+		function isNumber(num) 
+			{
+				return !isNaN(num);
+			}
+
+		function budgetformSubmitHandler(){
+			
+			var budget_form_inputs = document.getElementsByName("budget-form-input");
+			var total_cost=0;
+			
+
+			for (var i = 0; i < budget_form_inputs.length; i++) {
+				var input = budget_form_inputs[i];
+
+// If all the values of the form are not compleate do not submit form.
+				
+				if (input.value.length === 0 ){
+					alert ("Missing Travel expenses.");
+					return false;
+				} 
+				
+				 // if the Form is compleated proceed to Sum the values
+				 //convert the value to a number
+
+				var budget_values = Number(input.value);
+
+				// if the  values are a number sum them to get the total expenses of the trip
+
+				if (isNumber(budget_values)) {
+						total_cost += budget_values;
+						
+					}
+
+			
+				};
+				
+			
+
+			//Display as an Alert the Total cost of the Vacation
+			
+			alert (total_cost);
+			return true;
+		}
+	</script>
+
+</body>
+
+
+</html>

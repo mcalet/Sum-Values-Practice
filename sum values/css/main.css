@@ -1,0 +1,81 @@
+
+
+body {
+
+	/* Vacation Background Image */
+
+	background-image: url(image/vacation2.jpg);
+	background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+/* Title of the assigment style  */
+h1, p {
+ 	font-size: 45px;
+ 	text-align: center;
+ 	margin-top: 2%;
+
+}
+
+/* Box for the form style   */
+#vacation_budget { 
+
+    
+    display: table;
+    max-width: 80%;
+    margin: 0 auto;
+    box-shadow: 6px 10px 18px #CACACA;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FFFCEE;
+    margin-top: 15%;
+    padding: 15%;
+    padding-top: 5%;
+    opacity: 0.8;
+  	filter: alpha(opacity=30);
+    
+    
+
+ }
+/* Form title    */
+h2 {
+  font-size: 30px;
+	color: red;
+	margin-bottom: 25%;
+}
+
+/*Form label style */
+label{
+    
+    float: left;
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    
+} 
+
+/* Submit Button  */
+.submitbutton {
+    border: none;
+    border-style:double;
+    background-color: #2196f3;
+    color: snow;
+    padding: 6%;
+    font-size: 30px;
+    margin: 25px;
+    margin-left: 28%;
+    cursor: pointer;
+    
+    
+}
+
+/* Input boxes style  */
+input {
+
+	padding: 4%;
+	margin: 4%;
+	margin-left: 21%;
+	border-style: inset;
+	border-width: 5px;
+	border-color: #378abe;
+
+}
